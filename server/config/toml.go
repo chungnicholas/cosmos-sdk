@@ -138,6 +138,9 @@ swagger = {{ .API.Swagger }}
 # Address defines the API server to listen on.
 address = "{{ .API.Address }}"
 
+# Off-chain-address defines the API server to listen on for off chain services.
+off-chain-address = "{{ .API.OffChainAddress }}"
+
 # MaxOpenConnections defines the number of maximum open connections.
 max-open-connections = {{ .API.MaxOpenConnections }}
 

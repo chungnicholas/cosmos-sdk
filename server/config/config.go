@@ -20,6 +20,9 @@ const (
 	// DefaultAPIAddress defines the default address to bind the API server to.
 	DefaultAPIAddress = "tcp://0.0.0.0:1317"
 
+	// DefaultOffChainAPIAddress defines the default address for off chain services to bind the API server to.
+	DefaultOffChainAPIAddress = "tcp://0.0.0.0:1318"
+
 	// DefaultGRPCAddress defines the default address to bind the gRPC server to.
 	DefaultGRPCAddress = "0.0.0.0:9090"
 
@@ -112,6 +115,9 @@ type APIConfig struct {
 
 	// Address defines the API server to listen on
 	Address string `mapstructure:"address"`
+
+	// Offline defines if the API server to listen on for off chain services
+	OffChainAddress string `mapstructure:"off-chain-address"`
 
 	// MaxOpenConnections defines the number of maximum open connections
 	MaxOpenConnections uint `mapstructure:"max-open-connections"`
@@ -299,6 +305,7 @@ func DefaultConfig() *Config {
 			Enable:             false,
 			Swagger:            false,
 			Address:            DefaultAPIAddress,
+			OffChainAddress:    DefaultOffChainAPIAddress,
 			MaxOpenConnections: 1000,
 			RPCReadTimeout:     10,
 			RPCMaxBodyBytes:    1000000,
