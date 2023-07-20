@@ -21,7 +21,7 @@ const (
 	DefaultAPIAddress = "tcp://0.0.0.0:1317"
 
 	// DefaultOracleAPIAddress defines the default address for oracle service to bind the API server to.
-	DefaultOracleAPIAddress = "tcp://0.0.0.0:1318"
+	DefaultOracleAPIAddress = "tcp://0.0.0.0:1328"
 
 	// DefaultGRPCAddress defines the default address to bind the gRPC server to.
 	DefaultGRPCAddress = "0.0.0.0:9090"
