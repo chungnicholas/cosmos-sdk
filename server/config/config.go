@@ -116,7 +116,7 @@ type APIConfig struct {
 	// Address defines the API server to listen on
 	Address string `mapstructure:"address"`
 
-	// Offline defines if the API server to listen on for off chain services
+	// OffChainAddress defines if the API server to listen on for off chain services
 	OffChainAddress string `mapstructure:"off-chain-address"`
 
 	// MaxOpenConnections defines the number of maximum open connections
